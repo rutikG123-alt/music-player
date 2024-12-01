@@ -1,0 +1,346 @@
+/* src/App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Sidebar (Left Navigation) */
+.sidebar {
+  background: #000;
+  width: 250px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar .menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.sidebar .menu a:hover {
+  background: #ff4141;
+}
+
+.sidebar .general {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar .general a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #bbb;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ff4141;
+}
+
+/* Main Content (Song List and Image) */
+.main-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header (Navbar with tabs) */
+.navbar {
+  background: #1a1a1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: #ff4141;
+}
+
+.navbar input {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+/* Artist Section with Image */
+.artist-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background: #441010;
+  border-bottom: 1px solid #ff4141;
+  background-image: url(./bgc.png);
+  background-position: center;
+}
+
+.artist-section img {
+  height: 200px;
+  width: auto;
+  border-radius: 10px;
+  
+}
+
+.artist-section .info {
+  color: #fff;
+  text-align: left;
+}
+
+.artist-section .info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.artist-section .info p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Song List */
+.song-list {
+  background: #121212;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.song-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.song-list th, .song-list td {
+  padding: 10px;
+  text-align: left;
+}
+
+.song-list th {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.song-list tr {
+  transition: background 0.3s;
+}
+
+.song-list tr:hover {
+  background: #ff4141;
+}
+
+.song-list td {
+  border-bottom: 1px solid #333;
+  color: #ccc;
+}
+
+/* Now Playing Section */
+.now-playing {
+  background: #1a1a1a;
+  padding: 15px;
+  border-top: 1px solid #ff4141;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.now-playing img {
+  height: 60px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.now-playing .controls {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.now-playing .controls input[type="range"] {
+  width: 100%;
+}
+
+.now-playing .buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.now-playing .buttons button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.now-playing .buttons button:hover {
+  color: #ff4141;
+}
+
+/* App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+#app {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu a,
+.general a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.main-content {
+  width: 60%;
+  padding: 20px;
+}
+
+.navbar input {
+  margin-left: 20px;
+}
+
+.artist-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.song-list {
+  margin-top: 20px;
+}
+
+.right-panel {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #181818;
+  padding: 20px;
+}
+
+.control-card {
+  width: 90%;
+  padding: 20px;
+  background-color: #4e0707;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.control-card button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add these styles to App.css */
+
+/* For progress bar */
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  margin: 10px 0;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ff4141;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Artist image in the card */
+.artist-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* Add these styles to App.css */
+
+/* Mode Buttons */
+.mode-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.mode-buttons button {
+  background-color: #282828;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mode-buttons button.active-mode {
+  background-color: #ff4141;
+}
+
+.mode-buttons button:hover {
+  background-color: #444;
+}
+
